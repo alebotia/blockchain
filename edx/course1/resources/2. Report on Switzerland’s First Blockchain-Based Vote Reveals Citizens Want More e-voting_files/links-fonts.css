@@ -1,0 +1,32 @@
+a {
+    font-weight: 700;
+}
+
+a:visited {
+    color: #444444;
+    font-weight: 700;
+}
+
+footer .footer__socials a:visited {
+    color: #003979;
+}
+
+a.btn--white:visited {
+    color: #fff;
+    font-weight: 700;
+}
+
+.header__menu ul li a,
+.footer__links__item ul li a,
+.news-list .news-list__item,
+.news-list__content .news-list__item,
+.services-grid .two-thirds-width,
+.services-grid--bg .services-grid__areas .area,
+.l-covid19 p {
+    font-weight: inherit;
+}
+
+.section-container .item .item__name p,
+.experts .item p {
+    font-weight: 400;
+}

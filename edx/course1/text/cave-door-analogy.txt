@@ -1,0 +1,22 @@
+In this section, we're going to talk about a cybersecurity idea in blockchain known as "Zero-Knowledge Proofs".
+Zero-Knowledge Proofs are exactly what the name implies - they allow me to prove to another party that I have a certain piece of knowledge without revealing what that knowledge is.
+Zero-Knowledge Proofs are often referred to as zk-SNARKs, which stand for "Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge", or zk-SNARKs for short,
+or, if you want to be simple, we can just call them Zero-Knowledge Proofs.
+A great example of a Zero-Knowledge Proof is what we call the cave door analogy.
+Pretend that there's a circular cave, with only one entrance or exit and at the back of this circular cave there's a door which can be unlocked using a secret code entered onto a keypad.
+If I want to prove to you that I know the unlock code without revealing that unlock code to you,
+all I need to show is that I can walk into one end of the cave, open the door, and come out the other end.
+If I've successfully demonstrated that, then you know without a doubt I've been able to unlock that door,
+but yet I haven't revealed that unlock code to you.
+This simple cave door analogy is a Zero-Knowledge proof, and if you can remember this cave door analogy,
+then you'll understand why Zero-Knowledge Proofs are so important in blockchain.
+For example, a user may make a request to send another user some money.
+The blockchain naturally wants to make sure, before it commits this transaction,
+that the user sending the money has enough to send.
+However, the blockchain doesn't really need to know or care who is spending the money, or how much total money they have.
+Being able to answer a question of "Does a user have enough money to send to another user" without knowing who the user is, or exactly how much they have,
+is one of the primary use cases for Zero-Knowledge Proofs in blockchain.
+So, when you hear about zk-SNARKs, don't get intimidated.
+It's not a complex idea. Just think of Zero-Knowledge Proofs and the cave door,
+think about how important it is in blockchain to be able to prove a claim without actually revealing the information behind that claim,
+and you'll understand Zero-Knowledge Proofs.

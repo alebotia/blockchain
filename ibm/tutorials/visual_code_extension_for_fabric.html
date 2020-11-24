@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<!-- saved from url=(0179)https://courses.cognitiveclass.ai/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/courseware/a9c2f85f6f9548ccbc2f5cb7f77f5946/ebe7d85ff5304c06b63bbae315db25e1/?child=first -->
+<html lang="en"><!--<![endif]--><head dir="ltr"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript" src="./visual_code_extension_for_fabric_files/d2285414d1"></script><script src="./visual_code_extension_for_fabric_files/nr-1173.min.js.download"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"d2285414d1",applicationID:"432968216"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1173.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":3,"licenseKey":"d2285414d1","agent":"","transactionName":"YVFaYktUChEHBkVbWVgbfkNXVhALCQseUVlDRktTTlQWB0gTWFdBRRpRWF1QHFglCkRARVNDWURcfAoGAx0fVVNC","atts":"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","applicationID":"432968216","errorBeacon":"bam.nr-data.net","applicationTime":1439}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  
+<title data-base-title="
+ Hands-on tutorials | BC0201EN Courseware | Cognitive Class">
+  
+ Hands-on tutorials | Hands-on tutorials | BC0201EN Courseware | Cognitive Class
+</title>
+
+
+      <script type="text/javascript">
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+
+  
+
+  <script type="text/javascript" src="./visual_code_extension_for_fabric_files/djangojs.e37eef1ffc63.js.download"></script>
+  <script type="text/javascript" src="./visual_code_extension_for_fabric_files/ie11_find_array.bd1c6dc7a133.js.download"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://courses.cognitiveclass.ai/static/images/favicon.03ffbbf95a0d.ico">
+
+  
+  
+
+    <link href="./visual_code_extension_for_fabric_files/lms-style-vendor.68e48093f5dd.css" rel="stylesheet" type="text/css">
+
+
+
+    
+  
+
+    <link href="./visual_code_extension_for_fabric_files/lms-main-v1.0fe22d2a7c63.css" rel="stylesheet" type="text/css">
+
+
+
+
+    
+    <script type="text/javascript" src="./visual_code_extension_for_fabric_files/lms-main_vendor.a04b73033169.js.download" charset="utf-8"></script>
+
+
+    
+    <script type="text/javascript" src="./visual_code_extension_for_fabric_files/lms-application.fcdc824f5e8b.js.download" charset="utf-8"></script>
+
+
+
+  
+    
+    
+    <script type="text/javascript" src="./visual_code_extension_for_fabric_files/commons.e24feda30e58d81ca724.f818278bd0af.js.download"></script>
+
+
+
+  <script>
+    window.baseUrl = "/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="./visual_code_extension_for_fabric_files/require-config.38226099c6ad.js.download"></script>
+  
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'js/courseware/courseware_factory': 'js/courseware/courseware_factory.1504fc10caef',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.d5f10bc65ed0',
+'hls': 'common/js/vendor/hls.8f15a0109b05',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'moment': 'common/js/vendor/moment-with-locales.084396f4103c',
+'moment-timezone': 'common/js/vendor/moment-timezone-with-data.60142e6c4416',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.3074e40bcf89',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.7f46663f97b4',
+'js/dateutil_factory': 'js/dateutil_factory.841c29e02056',
+'course_bookmarks/js/views/bookmark_button': 'course_bookmarks/js/views/bookmark_button.d4cfaf3361fa',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.6064c7809de5',
+'js/views/message_banner': 'js/views/message_banner.bc5a1361d5f5',
+'js/groups/discussions_management/discussions_dashboard_factory': 'js/discussions_management/views/discussions_dashboard_factory.2e10d9097343',
+'js/courseware/course_info_events': 'js/courseware/course_info_events.2fc35b57627f'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+  
+
+  
+
+  
+
+    <link href="./visual_code_extension_for_fabric_files/lms-style-course-vendor.9d99b807515a.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+
+    <link href="./visual_code_extension_for_fabric_files/lms-course.9b508c0bc684.css" rel="stylesheet" type="text/css">
+
+
+
+
+<script type="text/javascript" src="./visual_code_extension_for_fabric_files/jquery.autocomplete.3bd10d7510d2.js.download"></script>
+<script type="text/javascript" src="./visual_code_extension_for_fabric_files/tooltip_manager.da362490e199.js.download"></script>
+
+<link href="./visual_code_extension_for_fabric_files/jquery.autocomplete.896181d3ec33.css" rel="stylesheet" type="text/css">
+  
+
+  
+
+  
+
+
+  
+
+
+<script type="application/json" id="user-metadata">
+    {"username": "alejandrobotia96", "enrollment_mode": "honor", "upgrade_link": null, "user_id": 1058256, "course_start": "2020-05-01T00:00:00+00:00", "course_end": null, "upgrade_deadline": null, "course_key_fields": {"org": "IBMDeveloperSkillsNetwork", "run": "v2", "course": "BC0201EN"}, "partition_groups": {"Enrollment Track Groups": [6, "IBM Blockchain Foundation Developer"]}, "has_non_audit_enrollments": true, "pacing_type": "self_paced", "upgrade_price": "Free", "course_id": "course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2", "has_staff_access": false, "forum_roles": [["Student"]], "enrollment_time": "2020-06-16T13:14:18.848209+00:00", "schedule_start": null, "email": "alejandrobotia352@gmail.com"}
+</script>
+
+  
+
+
+
+  
+
+
+  
+
+
+<!-- dummy Segment -->
+<script type="text/javascript">
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
+</script>
+<!-- end dummy Segment -->
+
+
+  <meta name="path_prefix" content="">
+  
+  
+
+  <meta name="openedx-release-line" content="ironwood">
+
+
+
+
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body class="ltr view-in-course view-courseware courseware  lang_en"><div id="MathJax_Message" style="display: none;"></div>
+
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip sr-only sr-only-focusable" href="https://courses.cognitiveclass.ai/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/courseware/a9c2f85f6f9548ccbc2f5cb7f77f5946/ebe7d85ff5304c06b63bbae315db25e1/?child=first#main">Skip to main content</a>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="global-header slim">
+    <div class="main-header">
+        
+
+
+
+
+
+<h1 class="header-logo">
+  <a href="https://cognitiveclass.ai/">
+    
+    <img class="logo" src="./visual_code_extension_for_fabric_files/cc-logo.png" alt="Cognitive Class Home Page">
+    
+  </a>
+    <div class="course-header">
+      <span class="provider">IBMDeveloperSkillsNetwork:</span>
+      <span class="course-number">BC0201EN</span>
+      
+      <span class="course-name">IBM Blockchain Foundation Developer</span>
+    </div>
+</h1>
+
+        <div class="hamburger-menu" role="button" aria-label="Options" menu="" aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+            
+
+
+
+
+
+
+
+
+<div class="nav-links">
+  <div class="main">
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+          <a class="tab-nav-link" href="https://cognitiveclass.ai/learn">Learning Paths</a>
+      </div>
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+          <a class="tab-nav-link" href="https://cognitiveclass.ai/courses">Courses</a>
+      </div>
+  </div>
+  <div class="secondary">
+    <div class="mobile-nav-item hidden-mobile nav-item">
+      <a class="help-link" href="http://edx.readthedocs.io/projects/open-edx-learner-guide/en/open-release-ironwood.master/index.html" target="_blank">Help</a>
+    </div>
+    
+
+
+
+
+
+
+<div class="nav-item hidden-mobile">
+    <a href="https://courses.cognitiveclass.ai/dashboard" class="menu-title">
+        <img class="user-image-frame" src="./visual_code_extension_for_fabric_files/default_50.3455a6581573.png" alt="">
+        <span class="sr-only">Dashboard for:</span>
+        <span class="username">alejandrobotia96</span>
+    </a>
+</div>
+<div class="nav-item hidden-mobile nav-item-dropdown" tabindex="-1">
+    <div class="toggle-user-dropdown" role="button" aria-label="Options" menu="" aria-expanded="false" tabindex="0" aria-controls="user-menu">
+        <span class="fa fa-caret-down" aria-hidden="true"></span>
+    </div>
+    <div class="dropdown-user-menu hidden" aria-label="More" options="" role="menu" id="user-menu" tabindex="-1">
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="https://courses.cognitiveclass.ai/dashboard" role="menuitem">Dashboard</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="https://courses.cognitiveclass.ai/account/settings" role="menuitem">Account</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="https://courses.cognitiveclass.ai/logout" role="menuitem">Sign Out</a></div>
+    </div>
+</div>
+  </div>
+</div>
+
+    </div>
+    <div class="mobile-menu hidden" aria-label="More" options="" role="menu" id="mobile-menu"><div class="mobile-nav-item hidden-mobile nav-item nav-tab mobile-nav-link">
+          <a class="tab-nav-link" href="https://cognitiveclass.ai/learn" role="menuitem">Learning Paths</a>
+      </div><div class="mobile-nav-item hidden-mobile nav-item nav-tab mobile-nav-link">
+          <a class="tab-nav-link" href="https://cognitiveclass.ai/courses" role="menuitem">Courses</a>
+      </div><div class="mobile-nav-item hidden-mobile nav-item mobile-nav-link">
+      <a class="help-link" href="http://edx.readthedocs.io/projects/open-edx-learner-guide/en/open-release-ironwood.master/index.html" target="_blank" role="menuitem">Help</a>
+    </div><div class="mobile-nav-item dropdown-item dropdown-nav-item mobile-nav-link"><a href="https://courses.cognitiveclass.ai/dashboard" role="menuitem">Dashboard</a></div><div class="mobile-nav-item dropdown-item dropdown-nav-item mobile-nav-link"><a href="https://courses.cognitiveclass.ai/account/settings" role="menuitem">Account</a></div><div class="mobile-nav-item dropdown-item dropdown-nav-item mobile-nav-link"><a href="https://courses.cognitiveclass.ai/logout" role="menuitem">Sign Out</a></div></div>
+</header>
+
+<!--[if lte IE 9]>
+<div class="ie-banner" aria-hidden="true"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/chrome" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>.</div>
+<![endif]-->
+
+
+
+        
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <div class="marketing-hero"></div>
+
+    <div class="content-wrapper main-container" id="content" dir="ltr">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/template" id="image-modal-tpl">
+    <div class="wrapper-modal wrapper-modal-image">
+  <section class="image-link">
+    <%= smallHTML%>
+    <a href="#" class="modal-ui-icon action-fullscreen" role="button">
+      <span class="label">
+        <span class="icon fa fa-arrows-alt fa-large" aria-hidden="true"></span> <%- gettext("Fullscreen") %>
+      </span>
+    </a>
+  </section>
+
+  <section class="image-modal">
+    <section class="image-content">
+      <div class="image-wrapper">
+        <img alt="<%= largeALT %>, <%- gettext('Large') %>" src="<%= largeSRC %>" />
+      </div>
+
+      <a href="#" class="modal-ui-icon action-close" role="button">
+        <span class="label">
+          <span class="icon fa fa-remove fa-large" aria-hidden="true"></span> <%- gettext("Close") %>
+        </span>
+      </a>
+
+      <ul class="image-controls">
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-in" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-plus fa-large" aria-hidden="true"></span> <%- gettext("Zoom In") %>
+            </span>
+          </a>
+        </li>
+
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-out is-disabled" aria-disabled="true" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-minus fa-large" aria-hidden="true"></span> <%- gettext("Zoom Out") %>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+</script>
+
+
+
+
+
+
+
+
+<div class="message-banner" aria-live="polite"></div>
+
+  
+
+
+
+
+
+
+
+    
+    <script type="text/javascript" src="./visual_code_extension_for_fabric_files/lms-proctoring.3795ab4fdf40.js.download" charset="utf-8"></script>
+
+
+        <script type="text/template" id="proctored-exam-status-tpl">
+            <div class="exam-timer">
+    <%
+        function gtLtEscape(str) {
+            return String(str)
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+        }
+    %>
+    <div class='exam-text'>
+        <% // xss-lint: disable=underscore-not-escaped %>
+        <%= interpolate_text('You are taking "{exam_link}" as a {exam_type} exam. The timer on the right shows the time remaining in the exam.', {exam_link: "<a href='" + exam_url_path + "'>"+gtLtEscape(exam_display_name)+"</a>", exam_type: (!_.isUndefined(arguments[0].exam_type)) ? exam_type : gettext('timed')}) %>
+        <%- gettext('To receive credit for problems, you must select "Submit" for each problem before you select "End My Exam".') %>
+    </div>
+    <div id="turn_in_exam_id" class="pull-right turn_in_exam">
+        <span>
+            <% if(attempt_status !== 'ready_to_submit') {%>
+                <button class="exam-button-turn-in-exam btn btn-pl-primary btn-primary">
+                    <%- gettext("End My Exam") %>
+                </button>
+            <% } %>
+        </span>
+        <span class="sr timer-announce" aria-live="assertive"></span>
+        <span class="exam-timer-clock">
+            <span id="time_remaining_id">
+                <b>
+                </b>
+            </span>
+            <button role="button" id="toggle_timer" class="btn btn-primary" aria-label="<%- gettext("Hide Timer") %>" aria-pressed="false">
+                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+            </button>
+        </span>
+    </div>
+</div>
+
+        </script>
+    <div class="proctored_exam_status"></div>
+
+    
+        <nav class="courseware wrapper-course-material" aria-label="Course Material">
+            <div class="course-material">
+                
+                <ol class="tabs course-tabs">
+                    
+
+
+
+
+
+  
+  <li class="tab">
+  <a href="https://courses.cognitiveclass.ai/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/course/" class="active">
+  Course
+      <span class="sr">, current location</span>
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="https://courses.cognitiveclass.ai/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/discussion/forum/" class="">
+  Discussion
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="https://courses.cognitiveclass.ai/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/progress" class="">
+  Progress
+  </a>
+  </li>
+
+                    
+                </ol>
+            </div>
+        </nav>
+
+
+<div class="container" lang="en">
+  <div class="course-wrapper" role="presentation">
+
+    <section class="course-content" id="course-content">
+        <header class="page-header has-secondary">
+            <div class="page-header-main">
+                <nav aria-label="Course" class="sr-is-focusable" tabindex="-1">
+                    <div class="has-breadcrumbs">
+                        <div class="breadcrumbs">
+                                <span class="nav-item nav-item-course">
+                                    <a href="https://courses.cognitiveclass.ai/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/course/">Course</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                <span class="nav-item nav-item-chapter" data-course-position="1" data-chapter-position="2">
+                                    <a href="https://courses.cognitiveclass.ai/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/course/#block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@chapter+block@a9c2f85f6f9548ccbc2f5cb7f77f5946">Learning materials</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                <span class="nav-item nav-item-section">
+                                    <a href="https://courses.cognitiveclass.ai/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/course/#block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@sequential+block@ebe7d85ff5304c06b63bbae315db25e1">Hands-on tutorials</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                            <span class="nav-item nav-item-sequence">Hands-on tutorials</span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" tabindex="-1" aria-label="Content">
+
+              
+<div class="xblock xblock-student_view xblock-student_view-sequential xmodule_display xmodule_SequenceModule xblock-initialized" data-graded="False" data-has-score="False" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="sequential" data-request-token="07901ceae03011ea94625a28430988fd" data-runtime-version="1" data-usage-id="block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@sequential+block@ebe7d85ff5304c06b63bbae315db25e1" data-type="Sequence" data-course-id="course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2">
+  
+  
+
+
+<div id="sequence_ebe7d85ff5304c06b63bbae315db25e1" class="sequence" data-id="block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@sequential+block@ebe7d85ff5304c06b63bbae315db25e1" data-position="1" data-ajax-url="/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/xblock/block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@sequential+block@ebe7d85ff5304c06b63bbae315db25e1/handler/xmodule_handler" data-next-url="/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/courseware/fbab387d16264a3f938ef846bc75ac96/27e94eb5ae16418692f98b157b2d5570/?child=first" data-prev-url="/courses/course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2/courseware/a9c2f85f6f9548ccbc2f5cb7f77f5946/c1a96f645c3d4fde89077f75610d0858/?child=last" data-save-position="true" data-show-completion="true">
+
+  <div class="sequence-nav">
+    <button class="sequence-nav-button button-previous">
+      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+      <span class="sequence-nav-button-label">Previous</span>
+    </button>
+    <button class="sequence-nav-button button-next">
+      <span class="sequence-nav-button-label">Next</span>
+      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+    </button>
+    <nav class="sequence-list-wrapper" aria-label="Sequence">
+      <ol id="sequence-list" role="tablist">
+        <li role="presentation">
+          <button class="seq_other nav-item tab active" role="tab" tabindex="0" aria-selected="true" aria-expanded="true" aria-controls="seq_content" data-index="0" data-id="block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@vertical+block@3095a8381aa9431c8042cc73944c8afe" data-element="1" data-page-title="Hands-on tutorials" data-path="Learning materials &gt; Hands-on tutorials &gt; Hands-on tutorials" data-graded="False" id="tab_0">
+            <span class="icon fa seq_other" aria-hidden="true"></span>
+              <span class="fa fa-check-circle check-circle is-hidden" style="color:green" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">other&nbsp;</span>Hands-on tutorials<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+      </ol>
+    </nav>
+  </div>
+  <div class="sr-is-focusable" tabindex="-1"></div>
+
+  <div id="seq_contents_0" aria-labelledby="tab_0" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    
+&lt;div class="xblock xblock-student_view xblock-student_view-vertical" data-graded="False" data-has-score="False" data-runtime-class="LmsRuntime" data-init="VerticalStudentView" data-course-id="course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2" data-request-token="07901ceae03011ea94625a28430988fd" data-runtime-version="1" data-usage-id="block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@vertical+block@3095a8381aa9431c8042cc73944c8afe" data-block-type="vertical"&gt;
+  
+
+  &lt;h2 class="hd hd-2 unit-title"&gt;Hands-on tutorials&lt;/h2&gt;
+
+    
+
+
+
+&lt;div class="bookmark-button-wrapper"&gt;
+  &lt;button class="btn btn-link bookmark-button "
+    aria-pressed="false"
+    data-bookmark-id="alejandrobotia96,block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@vertical+block@3095a8381aa9431c8042cc73944c8afe"
+    data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/"&gt;
+     &lt;span class="bookmark-text"&gt;Bookmark this page&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class="vert-mod"&gt;
+    &lt;div class="vert vert-0" data-id="block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@html+block@09563020c63d4070af8c20c34ff401ba"&gt;
+        
+&lt;div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlModule" data-graded="False" data-has-score="False" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="html" data-request-token="07901ceae03011ea94625a28430988fd" data-runtime-version="1" data-usage-id="block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@html+block@09563020c63d4070af8c20c34ff401ba" data-type="HTMLModule" data-course-id="course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;h3&gt;&lt;img src="/assets/courseware/v1/c2423e5b61100550e84cae0edb4cc911/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/ibp.png" alt="" width="50" height="69" /&gt;&lt;/h3&gt;
+&lt;h3&gt;Running the hands-on tutorials&lt;/h3&gt;
+&lt;p&gt;This section describes how to get started with the hands-on section of this course.&lt;/p&gt;
+&lt;p&gt;If you have already completed the IBM Blockchain Platform VS Code extension tutorials and were directed here from tutorial A10, please skip to the &lt;em&gt;Test your knowledge&lt;/em&gt; section of this course.&lt;/p&gt;
+&lt;p&gt;When following the instructions, be sure to follow every numbered step in the correct order:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/26f1989e66bd04e42f04711d2af7c370/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/bullet.png" alt="" width="11" height="11" /&gt;&amp;nbsp;&amp;nbsp; &lt;code&gt;1:&lt;/code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Complete every step that looks like this line.&lt;/p&gt;
+&lt;p&gt;This course uses the IBM Blockchain Platform extension for Visual Studio Code. Visual Studio Code (VS Code) is a popular integrated development environment from Microsoft and the IBM Blockchain Platform extension allows you to use it to develop blockchain applications.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/26f1989e66bd04e42f04711d2af7c370/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/bullet.png" alt="" width="11" height="11" /&gt;&amp;nbsp;&amp;nbsp; &lt;code&gt;2:&lt;/code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a href="https://code.visualstudio.com/Download" target="_blank"&gt;Download and install VS Code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Read the VS Code documentation for&amp;nbsp;specific software requirements and installation instructions.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/26f1989e66bd04e42f04711d2af7c370/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/bullet.png" alt="" width="11" height="11" /&gt;&amp;nbsp;&amp;nbsp; &lt;code&gt;3:&lt;/code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Start VS Code.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/26f1989e66bd04e42f04711d2af7c370/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/bullet.png" alt="" width="11" height="11" /&gt;&amp;nbsp;&amp;nbsp; &lt;code&gt;4:&lt;/code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; In the activity bar on the left-side of VS Code, click the Extensions icon to show the Extensions Marketplace.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/03fa53834b7723f2401510a2c6fbe3f2/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/4.png" alt="Marketplace icon in VS Code" width="402" height="288" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/26f1989e66bd04e42f04711d2af7c370/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/bullet.png" alt="" width="11" height="11" /&gt;&amp;nbsp;&amp;nbsp; &lt;code&gt;5:&lt;/code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; In the search facility of the marketplace, type IBM Blockchain Platform and click the top link.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/7e570d499189c1325fa45418eb9f2153/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/5.png" alt="IBM Blockchain Platform in the VS Code Marketplace" width="716" height="260" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/26f1989e66bd04e42f04711d2af7c370/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/bullet.png" alt="" width="11" height="11" /&gt;&amp;nbsp;&amp;nbsp; &lt;code&gt;6:&lt;/code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Click 'Install' to install the IBM Blockchain Platform extension.&lt;/p&gt;
+&lt;p&gt;This might take a few minutes to complete, and you might need to restart VS Code as part of this process.&lt;/p&gt;
+&lt;p&gt;The IBM Blockchain Platform VS Code extension has a number of prerequisite components, which are shown when you start the extension for the first time. When everything is available, the Prerequisites screen will show a "Let's Blockchain" button.&lt;/p&gt;
+&lt;p&gt;The tutorials make use of the pre-configured local Hyperledger Fabric instance, so ensure that "Enable Local Fabric" is checked.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/26f1989e66bd04e42f04711d2af7c370/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/bullet.png" alt="" width="11" height="11" /&gt;&amp;nbsp;&amp;nbsp; &lt;code&gt;7:&lt;/code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Install any prerequisite software and click "Let's Blockchain" when ready.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/952630483e287b08a59553d580a0cad0/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/7.png" alt="IBM Blockchain Platform Tutorials prerequisites" width="715" height="298" /&gt;&lt;/p&gt;
+&lt;p&gt;You might need to wait up to a few minutes while the extension is first initialized. When it is ready, the IBM Blockchain Platform homepage will be displayed.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/26f1989e66bd04e42f04711d2af7c370/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/bullet.png" alt="" width="11" height="11" /&gt;&amp;nbsp;&amp;nbsp; &lt;code&gt;8:&lt;/code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Click "Tutorials".&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/141388a2bae9c0a7fd15036affedc086/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/8.png" alt="Extension home page showing Tutorials link" width="713" height="305" /&gt;&lt;/p&gt;
+&lt;p&gt;The hands-on section of this course is contained within a set of ten introductory tutorials.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/26f1989e66bd04e42f04711d2af7c370/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/bullet.png" alt="" width="11" height="11" /&gt;&amp;nbsp;&amp;nbsp; 9&lt;code&gt;:&lt;/code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;strong&gt;Complete Basic tutorials A1 through A10.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/courseware/v1/4b3b1e445b086ed0d02f56e0a5891615/asset-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@asset+block/9.png" alt="Basic tutorials set with first tutorial link highlighted" width="717" height="628" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;The tutorials will take approximately three hours to complete.&lt;/p&gt;
+&lt;p&gt;When you have completed up to the section of tutorial A10 which invites you to claim your IBM Blockchain Foundation Developer badge, please return here and continue to the next section in order to demonstrate your understanding with the final assessment.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_content" role="tabpanel" aria-labelledby="tab_0">
+    
+<div class="xblock xblock-student_view xblock-student_view-vertical xblock-initialized" data-graded="False" data-has-score="False" data-runtime-class="LmsRuntime" data-init="VerticalStudentView" data-course-id="course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2" data-request-token="07901ceae03011ea94625a28430988fd" data-runtime-version="1" data-usage-id="block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@vertical+block@3095a8381aa9431c8042cc73944c8afe" data-block-type="vertical">
+  
+
+  <h2 class="hd hd-2 unit-title">Hands-on tutorials</h2>
+
+    
+
+
+
+<div class="bookmark-button-wrapper">
+  <button class="btn btn-link bookmark-button" aria-pressed="false" data-bookmark-id="alejandrobotia96,block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@vertical+block@3095a8381aa9431c8042cc73944c8afe" data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/">
+     <span class="bookmark-text">Bookmark this page</span>
+    </button>
+</div>
+
+
+<div class="vert-mod">
+    <div class="vert vert-0" data-id="block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@html+block@09563020c63d4070af8c20c34ff401ba">
+        
+<div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlModule xblock-initialized" data-graded="False" data-has-score="False" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="html" data-request-token="07901ceae03011ea94625a28430988fd" data-runtime-version="1" data-usage-id="block-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2+type@html+block@09563020c63d4070af8c20c34ff401ba" data-type="HTMLModule" data-course-id="course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2">
+  
+  <h3><img src="./visual_code_extension_for_fabric_files/ibp.png" alt="" width="50" height="69"></h3>
+<h3>Running the hands-on tutorials</h3>
+<p>This section describes how to get started with the hands-on section of this course.</p>
+<p>If you have already completed the IBM Blockchain Platform VS Code extension tutorials and were directed here from tutorial A10, please skip to the <em>Test your knowledge</em> section of this course.</p>
+<p>When following the instructions, be sure to follow every numbered step in the correct order:</p>
+<p><img src="./visual_code_extension_for_fabric_files/bullet.png" alt="" width="11" height="11">&nbsp;&nbsp; <code>1:</code>&nbsp;&nbsp;&nbsp; Complete every step that looks like this line.</p>
+<p>This course uses the IBM Blockchain Platform extension for Visual Studio Code. Visual Studio Code (VS Code) is a popular integrated development environment from Microsoft and the IBM Blockchain Platform extension allows you to use it to develop blockchain applications.</p>
+<p><img src="./visual_code_extension_for_fabric_files/bullet.png" alt="" width="11" height="11">&nbsp;&nbsp; <code>2:</code>&nbsp;&nbsp;&nbsp; <a href="https://code.visualstudio.com/Download" target="_blank">Download and install VS Code</a>.</p>
+<p>Read the VS Code documentation for&nbsp;specific software requirements and installation instructions.</p>
+<p><img src="./visual_code_extension_for_fabric_files/bullet.png" alt="" width="11" height="11">&nbsp;&nbsp; <code>3:</code>&nbsp;&nbsp;&nbsp; Start VS Code.</p>
+<p><img src="./visual_code_extension_for_fabric_files/bullet.png" alt="" width="11" height="11">&nbsp;&nbsp; <code>4:</code>&nbsp;&nbsp;&nbsp; In the activity bar on the left-side of VS Code, click the Extensions icon to show the Extensions Marketplace.</p>
+<p><img src="./visual_code_extension_for_fabric_files/4.png" alt="Marketplace icon in VS Code" width="402" height="288"></p>
+<p><img src="./visual_code_extension_for_fabric_files/bullet.png" alt="" width="11" height="11">&nbsp;&nbsp; <code>5:</code>&nbsp;&nbsp;&nbsp; In the search facility of the marketplace, type IBM Blockchain Platform and click the top link.</p>
+<p><img src="./visual_code_extension_for_fabric_files/5.png" alt="IBM Blockchain Platform in the VS Code Marketplace" width="716" height="260"></p>
+<p><img src="./visual_code_extension_for_fabric_files/bullet.png" alt="" width="11" height="11">&nbsp;&nbsp; <code>6:</code>&nbsp;&nbsp;&nbsp; Click 'Install' to install the IBM Blockchain Platform extension.</p>
+<p>This might take a few minutes to complete, and you might need to restart VS Code as part of this process.</p>
+<p>The IBM Blockchain Platform VS Code extension has a number of prerequisite components, which are shown when you start the extension for the first time. When everything is available, the Prerequisites screen will show a "Let's Blockchain" button.</p>
+<p>The tutorials make use of the pre-configured local Hyperledger Fabric instance, so ensure that "Enable Local Fabric" is checked.</p>
+<p><img src="./visual_code_extension_for_fabric_files/bullet.png" alt="" width="11" height="11">&nbsp;&nbsp; <code>7:</code>&nbsp;&nbsp;&nbsp; Install any prerequisite software and click "Let's Blockchain" when ready.</p>
+<p><img src="./visual_code_extension_for_fabric_files/7.png" alt="IBM Blockchain Platform Tutorials prerequisites" width="715" height="298"></p>
+<p>You might need to wait up to a few minutes while the extension is first initialized. When it is ready, the IBM Blockchain Platform homepage will be displayed.</p>
+<p><img src="./visual_code_extension_for_fabric_files/bullet.png" alt="" width="11" height="11">&nbsp;&nbsp; <code>8:</code>&nbsp;&nbsp;&nbsp; Click "Tutorials".</p>
+<p><img src="./visual_code_extension_for_fabric_files/8.png" alt="Extension home page showing Tutorials link" width="713" height="305"></p>
+<p>The hands-on section of this course is contained within a set of ten introductory tutorials.</p>
+<p><img src="./visual_code_extension_for_fabric_files/bullet.png" alt="" width="11" height="11">&nbsp;&nbsp; 9<code>:</code>&nbsp;&nbsp;&nbsp; <strong>Complete Basic tutorials A1 through A10.</strong></p>
+<p><img src="./visual_code_extension_for_fabric_files/9.png" alt="Basic tutorials set with first tutorial link highlighted" width="717" height="628"></p>
+<p></p>
+<p>The tutorials will take approximately three hours to complete.</p>
+<p>When you have completed up to the section of tutorial A10 which invites you to claim your IBM Blockchain Foundation Developer badge, please return here and continue to the next section in order to demonstrate your understanding with the final assessment.</p>
+<p></p>
+</div>
+
+    </div>
+</div>
+
+</div>
+
+  </div>
+
+  <nav class="sequence-bottom" aria-label="Section">
+    <button class="sequence-nav-button button-previous">
+      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+      <span>Previous</span>
+    </button>
+    <button class="sequence-nav-button button-next">
+      <span>Next</span>
+      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+    </button>
+  </nav>
+</div>
+
+</div>
+
+        </main>
+    </section>
+
+    <section class="courseware-results-wrapper">
+      <div id="loading-message" aria-live="polite" aria-relevant="all"></div>
+      <div id="error-message" aria-live="polite"></div>
+      <div class="courseware-results search-results" data-course-id="course-v1:IBMDeveloperSkillsNetwork+BC0201EN+v2" data-lang-code="en"></div>
+    </section>
+
+  </div>
+  
+
+
+
+
+
+
+
+
+
+    
+    
+    <script type="text/javascript" src="./visual_code_extension_for_fabric_files/CourseSock.207e89e610bb26d251c9.713b569749c9.js.download"></script>
+      <script type="text/javascript">
+        
+    new CourseSock({
+        el:'.verification-sock'
+    });
+
+      </script>
+
+
+</div>
+<div class="container-footer">
+</div>
+
+      
+    </div>
+
+        
+
+
+
+
+  <div class="wrapper wrapper-footer">
+    <footer id="footer-openedx" class="footer grid-container">
+      <div class="colophon">
+        <nav class="nav-colophon" aria-label="About">
+          <ol>
+            <li class="nav-colophon-0">
+              <a href="https://cognitiveclass.ai/privacy">Privacy Notice</a>
+            </li>
+          </ol>
+        </nav>
+
+        <p class="copyright">© Cognitive Class.  All rights reserved except where noted.  edX, Open edX and their respective logos are registered trademarks of edX Inc. </p>
+      </div>
+
+
+        <div class="footer-about-openedx">
+          <p class="powered-by">Powered by</p>
+          <a href="https://cognitiveclass.ai/">
+            <img src="./visual_code_extension_for_fabric_files/cc-footer.0366456c948b.png" alt="Powered by IBM Skills Network" width="140">
+            IBM<br>Skills Network
+          </a>
+        </div>
+
+    </footer>
+
+    <script type="text/javascript">
+      if ("none" === "browser") {
+        setInterval(function() {
+          var req = new XMLHttpRequest()
+          req.open("GET", "/heartbeat", true)
+          req.send(null)
+        }, 5000)
+      }
+    </script>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+  <script type="text/javascript" src="./visual_code_extension_for_fabric_files/jquery.scrollTo.525edcc52fe8.js.download"></script>
+  <script type="text/javascript" src="./visual_code_extension_for_fabric_files/jquery.flot.d3d45ff0c6a8.js.download"></script>
+
+  
+    <script type="text/javascript" src="./visual_code_extension_for_fabric_files/lms-courseware.515d666a83a0.js.download" charset="utf-8"></script>
+
+
+  
+
+
+
+
+<script type="text/javascript">
+    // Fast Preview was introduced in 2.5. However, it
+    // causes undesirable flashing/font size changes when
+    // MathJax is used for interactive preview (equation editor).
+    // Setting processSectionDelay to 0 (see below) fully eliminates
+    // fast preview, but to reduce confusion, we are also setting
+    // the option as displayed in the context menu to false.
+    // When upgrading to 2.6, check if this variable name changed.
+    window.MathJax = {
+      menuSettings: {CHTMLpreview: false}
+    };
+</script>
+
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+</script>
+<script type="text/x-mathjax-config;executed=true">
+
+  // In order to eliminate all flashing during interactive
+  // preview, it is necessary to set processSectionDelay to 0
+  // (remove delay between input and output phases). This
+  // effectively disables fast preview, regardless of
+  // the fast preview setting as shown in the context menu.
+  MathJax.Hub.processSectionDelay = 0;
+
+  MathJax.Hub.signal.Interest(function(message) {
+    if(message[0] === "End Math") {
+        set_mathjax_display_div_settings();
+    }
+  });
+  function set_mathjax_display_div_settings() {
+    $('.MathJax_Display').each(function( index ) {
+      this.setAttribute('tabindex', '0');
+      this.setAttribute('aria-live', 'off');
+      this.removeAttribute('role');
+      this.removeAttribute('aria-readonly');
+    });
+  }
+</script>
+
+<script type="text/javascript">
+    // Activating Mathjax accessibility files
+    window.MathJax = {
+        menuSettings: {
+            collapsible: true,
+            autocollapse: true,
+            explorer: true
+        }
+    };
+</script>
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="./visual_code_extension_for_fabric_files/MathJax.js.download"></script>
+
+
+
+  
+    
+      <script type="text/javascript" src="./visual_code_extension_for_fabric_files/courseware_factory.1504fc10caef.js.download"></script>
+    <script type="text/javascript">
+        (function (require) {
+            require(['js/courseware/courseware_factory'], function (CoursewareFactory) {
+                
+    CoursewareFactory();
+  
+            });
+        }).call(this, require || RequireJS.require);
+    </script>
+
+
+
+  <script type="text/javascript">
+    var $$course_id = "course\u002Dv1:IBMDeveloperSkillsNetwork+BC0201EN+v2";
+  </script>
+
+
+<script src="./visual_code_extension_for_fabric_files/XModuleShim.7d541d71536fa73c719f.edc6eb43de19.js.download" type="application/javascript"></script>
+<script src="./visual_code_extension_for_fabric_files/HtmlModule.f49be45da3b421f4ff3a.645dc22ac629.js.download" type="application/javascript"></script>
+<script src="./visual_code_extension_for_fabric_files/VerticalStudentView.9b38798e0079e0e4c9dd.a8cf7cd152ff.js.download" type="application/javascript"></script>
+<script src="./visual_code_extension_for_fabric_files/SequenceModule.4f88a12d14d3a9e3c7f4.f7ceb63d269b.js.download" type="application/javascript"></script>
+
+
+
+  
+
+
+
+  <script type="text/javascript" src="./visual_code_extension_for_fabric_files/noreferrer.aa62a3e70ffa.js.download" charset="utf-8"></script>
+  <script type="text/javascript" src="./visual_code_extension_for_fabric_files/navigation.08930e16ab3d.js.download" charset="utf-8"></script>
+  <script type="text/javascript" src="./visual_code_extension_for_fabric_files/header.309a1243e175.js.download"></script>
+  
+
+
+
+
+<div id="reader-feedback" class="sr" aria-live="polite"></div><div class="tooltip" style="display: none; opacity: 0;"></div></body></html>
